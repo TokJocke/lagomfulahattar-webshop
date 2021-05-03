@@ -3,7 +3,6 @@ Theme name: lagom fula hattar theme
 Author: Jocke, Sebbe, Robin, Anton & Victor
 */
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,64 +11,38 @@ Author: Jocke, Sebbe, Robin, Anton & Victor
 html, body{ 
     min-height: 100vh;
     overflow :auto;
-    
+    background-color: tomato;
+}
+
+#sideNavBar {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+}
+
+header {
+    background-color: green;
+    display: flex;
+    width: 85%;
+    height: 10%;
+    margin-left: 15%;
+    position: fixed;
 }
 
 main {
     background-color: thistle;
     display: flex;
     flex-direction: column;
-    min-width: 85%;
+    width: 85%;
     margin-left: 15%;
     margin-top: 10vh;
 }
 
-/* Header */
-
-header {
-    background-color: green;
-    display: flex;
-    min-width: 85%;
-    height: 10%;
-    margin-left: 15%;
-    position: fixed;
-}
-
-/* Sidenav/menu */
-
-#sideNavBar {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    min-width: 15%;
-    height: 100%;
-    position: fixed;
-}
-
-.menu {
-    list-style: none;
-    padding-inline-start: 0.3em;
-}
-
-.menu > li {
-    margin-bottom: 1em;
-}
-
-/* .linkText {
-    text-align: center;
-} */
-
-a, a:link, a:visited {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-  }
-
-
-/* parallax */
-  
 .parallax {
-    height: 100vh;
+    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
