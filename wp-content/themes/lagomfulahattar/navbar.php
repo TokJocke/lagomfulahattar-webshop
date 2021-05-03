@@ -1,10 +1,28 @@
 
 
 
-   
-    <?php wp_nav_menu( [
-        'link_before' => '<p class="linkText">',
-        'link_after' => '</p><div class="linkFloor"></div>',
-        'container_id' => 'sideNavBar',
-    ]); ?>
+<div id="navMenu">
+
+<div class="logoWrapper">
+    <?php dynamic_sidebar("logo"); ?>
+</div>
+
+<?php 
+
+    
+    wp_nav_menu( [
+        'link_before' => 
+            '<div class="linkFloor"></div>
+            <p class="linkText">',
+        'link_after' => '</p>',
+        'container_id' => 'sideNav',
+    ]); 
+    
+    
+?>
+
+</div> 
+
+
+
 

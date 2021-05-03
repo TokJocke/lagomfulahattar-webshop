@@ -7,43 +7,72 @@ Author: Jocke, Sebbe, Robin, Anton & Victor
 * {
     box-sizing: border-box;
     margin: 0;
+    color: #666CCD;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 html, body{ 
     min-height: 100vh;
     overflow :auto;
-    
+    background-color: #FDD781;
 }
 
 main {
-    background-color: thistle;
+    
     display: flex;
     flex-direction: column;
     min-width: 85%;
     margin-left: 15%;
     margin-top: 10vh;
+    
 }
 
 /* Header */
 
 header {
-    background-color: green;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     min-width: 85%;
     height: 10%;
     margin-left: 15%;
     position: fixed;
 }
 
-/* Sidenav/menu */
 
-#sideNavBar {
-    background-color: red;
+.headerDiv {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    min-width: 15%;
-    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+/* Sidenav/menu */
+
+#navMenu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
+    min-width: 15%;
+    max-width: 15%;
+    height: 100%;
+}
+
+.logoWrapper {
+    object-fit: contain;
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 30%;
+}
+
+#sideNav {
+    display: flex;
+    flex-direction: column;
+ 
+
+    
 }
 
 .menu {
@@ -53,17 +82,31 @@ header {
 
 .menu > li {
     margin-bottom: 1em;
-}
 
-/* .linkText {
-    text-align: center;
-} */
+}
 
 a, a:link, a:visited {
     text-decoration: none;
-    color: black;
     font-size: 1.5rem;
   }
+
+.linkFloor {
+    background-color: #666CCD;
+    flex: 1;
+    height: 0.3em;
+    max-width: 0em;
+    transition: max-width 0.2s ease-in-out;
+    align-self: center;
+    margin-right: 0.1em;
+}
+
+li:hover .linkFloor {
+    max-width: 1.5em;
+}
+
+.menu-item > a {
+    display: flex;
+}  
 
 
 /* parallax */
@@ -75,3 +118,6 @@ a, a:link, a:visited {
     background-position: top center;
     background-attachment: fixed;
 }
+
+
+/* Generall styling */

@@ -12,8 +12,20 @@ function load_styles() {
 //    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 }  
 
+//test widget
+register_sidebar([
+    'name' => 'logo',
+    'Description' => 'widget for logo',
+    'id' => 'logo',
+    "before_widget" => false,
+]);
 
-
+register_sidebar([
+    'name' => 'search bar',
+    'Description' => 'search bar',
+    'id' => 'search_bar',
+    "before_widget" => false,
+]);
 
 
 
@@ -22,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('woocommerce');
-
+add_theme_support("widgets");
 
 
 

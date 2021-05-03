@@ -11,11 +11,16 @@
 </head>
 
 <body>
-    <header>
+   <header>
 
-    
+      <div class="headerDiv">
+         <a class="logo" href="<?=get_bloginfo("url");?>">
+            <h2><?=get_bloginfo("name");?></h2> 
+         </a>
+         <?php dynamic_sidebar("search_bar"); ?>
+      </div>
 
-       header
-  
-    </header>
+
+
+   </header>
  <!--    <main> -->
