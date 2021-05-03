@@ -120,4 +120,46 @@ li:hover .linkFloor {
 }
 
 
-/* Generall styling */
+/* searchwidget styling */
+
+#searchform {
+    width: 100%;
+    height: 100%;
+}
+
+#searchform > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#s {
+    background-color: #666bcd9a;
+    color: white;
+    width: 70%; 
+    border: none;
+    
+
+}
+
+#s:focus {
+    background-color: #666CCD;
+}
+
+#searchsubmit {
+    background-color: #666CCD;
+    color: white;
+    width: 25%; 
+    border: none;
+    
+}
+
+#searchsubmit:hover {
+    box-shadow: 0 0 10px 2px black;
+    cursor: pointer;
+}
+
+#searchsubmit:active {
+    box-shadow: inset 0 0 5px 2px black;
+}
