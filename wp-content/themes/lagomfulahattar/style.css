@@ -142,6 +142,36 @@ li:hover .linkFloor {
     background-color: #666bcd9a;
     color: #FDD781;
 }
+
+
+
+.wpcf7-submit {
+background-color: #666CCD;
+color: FDD781;
+width: 25%; 
+height: 4vh;
+border: none;
+font-weight: 600;
+font-size: 1.5vh;
+}
+.Laggtillfil submit{
+    background-color: #666CCD;
+    color: #FDD781;
+    width: 75%; 
+    height: 2.3vh;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5vh;
+    }
+
+.wpcf7-submit:hover {
+    box-shadow: 0 0 10px 2px black;
+    cursor: pointer;
+}
+
+.wpcf7-submit:active {
+    box-shadow: inset 0 0 5px 2px black;
+}
 /* Generall styling */
 
 
