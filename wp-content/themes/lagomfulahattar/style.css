@@ -9,6 +9,7 @@ Author: Jocke, Sebbe, Robin, Anton & Victor
     margin: 0;
     color: #666CCD;
     font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
 }
 
 html, body{ 
@@ -21,6 +22,7 @@ main {
     
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-width: 85%;
     margin-left: 15%;
     margin-top: 10vh;
@@ -29,14 +31,17 @@ main {
 
 /* Header */
 
-header {
+#topHeader {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     min-width: 85%;
-    height: 10%;
+    height: 15%;
     margin-left: 15%;
     position: fixed;
+    z-index: 99;
+    background-color: #FDD781;
+    padding-bottom: 5vh; /* Får känna på denna   */
 }
 
 
@@ -64,15 +69,13 @@ header {
     object-fit: contain;
     display: flex;
     max-width: 100%;
-    margin-bottom: 30%;
+    margin-bottom: 1em;
+    padding: 0.5em;
 }
 
 #sideNav {
     display: flex;
     flex-direction: column;
- 
-
-    
 }
 
 .menu {
@@ -81,14 +84,18 @@ header {
 }
 
 .menu > li {
-    margin-bottom: 1em;
-
+    margin-bottom: 1em; 
 }
 
 a, a:link, a:visited {
     text-decoration: none;
     font-size: 1.5rem;
   }
+
+.linkText {
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .linkFloor {
     background-color: #666CCD;
@@ -106,17 +113,38 @@ li:hover .linkFloor {
 
 .menu-item > a {
     display: flex;
+   /*  justify-content: center; */ /* Makes the nav links centered.. Maybe not for keeping */
 }  
 
 
 /* parallax */
   
 .parallax {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+    background-repeat: repeat;
+    background-size: 3em;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 90%;
+    border-radius: 15px;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.paraBox {
+    border-radius: 15px;
+    background-color: rgba(240, 128, 128);
+    padding: 1em;
+    width: 80%;
+    height: 80%;
+}
+
+
+.parallax:nth-child(2) {
+    background-color:#03a5c6;
 }
 
 
@@ -163,3 +191,86 @@ li:hover .linkFloor {
 #searchsubmit:active {
     box-shadow: inset 0 0 5px 2px black;
 }
+
+/* Product widgets */
+
+.product_list_widget {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    padding-inline-start: 0;
+
+
+}
+
+    .product_list_widget::-webkit-scrollbar {
+        display:none;
+    }
+
+
+    .product_list_widget > li {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-top: 2em;
+        align-items: center;
+        border: 2px solid #FDD781;
+        border-radius: 15px;
+        padding: 1em;
+    }
+/* 
+    .product_list_widget > li:last-child {
+        margin-bottom: 2em;
+    } */
+
+    
+
+    .product_list_widget > li:hover {
+        background-color: #FDD781;
+    }
+
+        .product_list_widget > li > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .product_list_widget > li > a > img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                border-radius: 15px;
+
+            }
+            .product_list_widget > li > a > span {
+                font-size: 2rem;
+                margin-bottom: 0.2em;
+                background-color: ivory;
+                border-radius: 10px;
+                padding: 0em 0.1em;
+                width: 100%;
+                text-align: center;
+            }
+
+del {
+    color: white;
+}
+
+    del > span > bdi {
+        font-size: 1.3em;
+        color: red;
+    }
+
+
+ins {
+    color: white;
+}
+
+    ins > span > bdi {
+        font-size: 1.3em;
+        color: green;
+    }
