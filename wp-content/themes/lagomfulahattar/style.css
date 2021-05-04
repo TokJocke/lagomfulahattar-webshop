@@ -121,3 +121,62 @@ li:hover .linkFloor {
 
 
 /* Generall styling */
+
+
+.shop-content{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    height: 100vh;
+    
+    
+}
+.shop-title{
+    text-align: center;
+}
+.taxo-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+    /* background-color: aqua; */
+}
+.taxo-list > a{
+    padding: 20px;
+}
+.map{
+    margin: 20px;
+    width: 90%;
+    margin-top: 20px;
+    height: 60vh;
+    border: 3px solid #666CCD;
+    border-radius: 5px;
+    
+    
+}
+/* taxonomy page */
+.taxo-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.taxo-info{
+    display: flex;
+    flex-direction: column;
+}
+.taxo-info > p{
+    padding: 10px;
+}
+.taxo-map{
+    display: flex;
+    margin: 20px;
+    width: 50%;
+    margin-top: 20px;
+    height: 50%;
+    border: 3px solid #666CCD;
+    border-radius: 5px;
+}

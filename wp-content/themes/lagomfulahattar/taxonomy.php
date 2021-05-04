@@ -23,12 +23,9 @@
   
      <div class="shop-content" >
          <h1 class="shop-title"><?php the_title(); ?> </h1>
-         
-         <div class="map">
-         <?php the_content(); ?>
-         </div>
-         <div class="taxo-list">
-         <?php  
+        
+        <div class="taxo-list">
+            <?php  
             $terms = get_terms(
                 array(
                     'taxonomy'   => 'shop_content',
@@ -41,13 +38,23 @@
                     // Run a loop and print them all
                     foreach ( $terms as $term ) { ?>
             
-                <a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
-                    <?php echo $term->name; ?>
-                </a><?php
+            <a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
+                <?php echo $term->name; ?>
+            </a><?php
             }
         } 
         ?>
          </div>
+        <div class="taxo-content">
+            <div class="taxo-info">
+                <?php 
+                    the_archive_description(); 
+                ?>
+            </div>
+            <div class="taxo-map">
+                <?php the_content(); ?>
+            </div>
+        </div>
          
 
      </div>
