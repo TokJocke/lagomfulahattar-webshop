@@ -119,9 +119,28 @@ li:hover .linkFloor {
 }
 /* Kontaktsida */
 .mapsForm {
-    align-items: center;
-    height: 100%;
+    flex: 1;
+    display: flex;
+    height: 100vh;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.mapsForm h2 {
+    font-size: 5vh;
+    padding: 2vh;
+}
+.mapsForm p {
+    font-size: 3vh;
+    font-weight: 600;
+    padding-bottom:10px;
+}
+.mapsForm select {
+    font-size: 3vh;
+}
+.mapsForm textarea, input, select, option {
+    background-color: #666bcd9a;
+    color: #FDD781;
 }
 /* Generall styling */
 
