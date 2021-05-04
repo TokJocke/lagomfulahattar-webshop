@@ -3,6 +3,7 @@
 
 function load_styles() {
     wp_enqueue_style( 'commonStyle', get_template_directory_uri() . './style.css', false );
+    wp_enqueue_style( 'styleForMyAcc', get_template_directory_uri() . './myacc.css', false );
 //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
 }
  
