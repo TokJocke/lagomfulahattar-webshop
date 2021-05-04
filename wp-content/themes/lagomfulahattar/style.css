@@ -117,5 +117,10 @@ li:hover .linkFloor {
     background-position: top center;
     background-attachment: fixed;
 }
-
+/* Kontaktsida */
+.mapsForm {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 /* Generall styling */
