@@ -48,7 +48,7 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
-register_sidebar([
+/* register_sidebar([
     'name' => 'on sale',
     'Description' => 'on sale widget area',
     'id' => 'on_sale',
@@ -62,7 +62,7 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
-
+ */
 
 //add_action( 'wp_enqueue_scripts', 'load_scripts' );
 add_action( 'wp_enqueue_scripts', 'load_styles' );
@@ -73,15 +73,15 @@ add_theme_support("widgets");
 
 //ADD shortcodes
 add_shortcode("banan", "banantest");
-add_shortcode("onSale", "sale_shortCode");
-add_shortcode("popular", "popular_products");
+/* add_shortcode("onSale", "sale_shortCode");
+add_shortcode("popular", "popular_products"); */
 
-
+/* 
 add_action("woocommerce_after_widget_product_list", "banan");
 
 function banan() {
     echo "banan";
-}
+} */
 
 /**
  * Proper ob_end_flush() for all levels
