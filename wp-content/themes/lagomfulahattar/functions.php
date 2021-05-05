@@ -2,9 +2,12 @@
 
 
 function load_styles() {
+
+    wp_enqueue_style( 'styleForMyAcc', get_template_directory_uri() . './myacc.css', false );
     wp_enqueue_style( 'commonStyle', get_template_directory_uri() . '/style.css', false );
     wp_enqueue_style( 'homeCss', get_template_directory_uri() . '/CSS/home.css', false );
     wp_enqueue_style( 'singleCss', get_template_directory_uri() . '/CSS/single.css', false );
+
 //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
 }
  
