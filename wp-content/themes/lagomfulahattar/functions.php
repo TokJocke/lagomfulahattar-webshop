@@ -2,8 +2,12 @@
 
 
 function load_styles() {
-    wp_enqueue_style( 'commonStyle', get_template_directory_uri() . './style.css', false );
+
     wp_enqueue_style( 'styleForMyAcc', get_template_directory_uri() . './myacc.css', false );
+    wp_enqueue_style( 'commonStyle', get_template_directory_uri() . '/style.css', false );
+    wp_enqueue_style( 'homeCss', get_template_directory_uri() . '/CSS/home.css', false );
+    wp_enqueue_style( 'singleCss', get_template_directory_uri() . '/CSS/single.css', false );
+
 //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
 }
  
@@ -37,11 +41,24 @@ add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('woocommerce');
 add_theme_support("widgets");
+add_theme_support( 'wp-block-styles' );
+
+// Add support for full and wide align images.
+add_theme_support( 'align-wide' );
 
 
 
 
+//add_filter the_excerpt
+function wpdocs_custom_excerpt_length( $length ) {
+    return 40;
+}
+function wpdocs_excerpt_more( $more ) {
+    return ' LÄS MER &#x21d2;';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 
