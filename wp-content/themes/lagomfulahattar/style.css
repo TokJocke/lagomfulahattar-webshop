@@ -176,8 +176,12 @@ font-size: 1.5vh;
     box-shadow: inset 0 0 5px 2px black;
 }
 
+/*Webbutik styling*/
+.wc-block-grid__products .wc-block-grid__product-image img {
+    width: 100%;
+    height: 35vh;
+}
 /* Generall styling */
-
 .shop-content{
     display: flex;
     flex-direction: column;
