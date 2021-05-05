@@ -2,7 +2,6 @@
 
 
 <div id="navMenu">
-
 <div class="logoWrapper">
     <?php dynamic_sidebar("logo"); ?>
 </div>

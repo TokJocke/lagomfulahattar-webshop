@@ -15,8 +15,27 @@ function load_scripts() {
 //    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
 }  
 
+//Short code functions
+function banantest() {
+    ob_start();
+    dynamic_sidebar("logo");
+    $inspelning = ob_get_clean();
+    return $inspelning;
+}
 
+function sale_shortCode() {
+    ob_start();
+    dynamic_sidebar("on_sale");
+    $inspelning = ob_get_clean();
+    return $inspelning;
+}
 
+function popular_products() {
+    ob_start();
+    dynamic_sidebar("popular_products");
+    $inspelning = ob_get_clean();
+    return $inspelning;
+}
 
 
 //Widgets
@@ -34,6 +53,21 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
+/* register_sidebar([
+    'name' => 'on sale',
+    'Description' => 'on sale widget area',
+    'id' => 'on_sale',
+    "before_widget" => false,
+]);
+
+register_sidebar([
+    'name' => 'popular products',
+    'Description' => 'campaign slide show',
+    'id' => 'popular_products',
+    "before_widget" => false,
+]);
+
+ */
 
 //add_action( 'wp_enqueue_scripts', 'load_scripts' );
 add_action( 'wp_enqueue_scripts', 'load_styles' );
@@ -46,7 +80,18 @@ add_theme_support( 'wp-block-styles' );
 // Add support for full and wide align images.
 add_theme_support( 'align-wide' );
 
+//ADD shortcodes
+add_shortcode("banan", "banantest");
+/* add_shortcode("onSale", "sale_shortCode");
+add_shortcode("popular", "popular_products"); */
 
+/* 
+add_action("woocommerce_after_widget_product_list", "banan");
+
+
+function banan() {
+    echo "banan";
+} */
 
 
 //add_filter the_excerpt
@@ -77,14 +122,7 @@ add_action( 'shutdown', function() {
 
 
 
-function banantest() {
-    ob_start();
-    dynamic_sidebar("logo");
-    $inspelning = ob_get_clean();
-    return $inspelning;
-}
 
-add_shortcode("banan", "banantest");
 
 
 
