@@ -32,9 +32,10 @@
     }
 
 
-  .transformers {
-      
+  .rotate {
     animation: rotate 0.5s forwards;
   }
 
-  
+  .bounce {
+    animation: bounce 4s ease-in-out infinite; 
+  }

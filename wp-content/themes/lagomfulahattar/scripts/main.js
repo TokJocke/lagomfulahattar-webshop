@@ -20,9 +20,11 @@ function flipArrow() {
     for(let i = 0; i < productContainers.length; i++) {
         let children = productContainers[i].childNodes
         let lastChild = children[children.length-1]
+        console.log("lastChild " , lastChild)
         let notLastChild = children[children.length-4]
-        objectInView(notLastChild, "fas fa-arrow-down")
-        objectInView(lastChild, "fas fa-arrow-down transformers") 
+        console.log("notLastChild ", notLastChild)
+        objectInView(notLastChild, "fas fa-arrow-down bounce")
+        objectInView(lastChild, "fas fa-arrow-down rotate") 
     }
 
 }
@@ -34,9 +36,11 @@ function objectInView(param, addClass) {
     let observer = new IntersectionObserver((entries, observer) => { 
       entries.forEach(entry => {
         if(entry.isIntersecting){
+                console.log("scrollTarget: ", entry.target)
                 let parent = entry.target.parentNode.parentNode.parentNode.parentNode
                 let childrenOfParent = parent.childNodes
                 let arrow = childrenOfParent[3]
+                console.log("arrow: ", arrow)
                 arrow.classList = addClass
         }
     });
