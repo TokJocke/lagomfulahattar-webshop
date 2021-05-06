@@ -1,8 +1,20 @@
+#account-section {    
+    display: flex;
+    flex-direction: column;
+    min-width: 85%;
+    margin-left: 15%;
+    margin-top: 10vh;
+}
+
 #mitt-konto {
     max-width: 70vw;
     margin-left: 5vw;
-  }
-  
+}
+
+.woocommerce .col2-set, .woocommerce-page .col2-set {
+    margin-top: 10px;
+    margin-left: 15px;
+} 
   
   form.woocommerce-form.woocommerce-form {
       border: none;

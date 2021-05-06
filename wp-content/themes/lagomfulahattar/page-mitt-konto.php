@@ -6,7 +6,7 @@
 
 
 
-<main>
+<section id="account-section">
 
 
 <?php get_template_part('parallax'); ?>
@@ -24,7 +24,7 @@
 
 
 
-</main>
+</section>
 
 
 
