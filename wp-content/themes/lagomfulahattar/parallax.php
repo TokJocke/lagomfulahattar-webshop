@@ -3,7 +3,7 @@
 
 <?php
  
-$loop = new WP_Query( array('post_type' => 'parallax', 'posts_per_page' => 10 ) ); 
+$loop = new WP_Query( array('post_type' => 'parallax', 'posts_per_page' => 10, 'orderby' => 'date', 'order' => 'ASC' )); 
  
 while ( $loop->have_posts() ) : $loop->the_post();
  
@@ -14,7 +14,8 @@ while ( $loop->have_posts() ) : $loop->the_post();
             <h1><?php the_title();?></h1>        
             <?php the_content();?>
         </div>
-        
+       
+        <i class="fas fa-arrow-down bounce"></i> 
     </div>
   
 <?php endwhile; ?>
