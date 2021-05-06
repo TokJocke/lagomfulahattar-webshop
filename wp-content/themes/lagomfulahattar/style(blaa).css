@@ -3,6 +3,9 @@ Theme name: lagom fula hattar theme
 Author: Jocke, Sebbe, Robin, Anton & Victor
 */
 
+<div class="parallaxImg" style="background-image: url(<?= get_the_post_thumbnail_url();?>)"></div>
+
+
 * {
     box-sizing: border-box;
     margin: 0;

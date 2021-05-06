@@ -1,8 +1,8 @@
 
 
-.aligncard{
+.alignCard{
   align-items: center !important; 
-  align-content: center i !important;
+  height: 1500px !important ;
 }
 .newsTitle{
   padding:0.5em 0;
@@ -15,6 +15,7 @@
 }
 
 .card{
+
   display: flex;
   margin: 2em;
   color: #FDD781 !important;

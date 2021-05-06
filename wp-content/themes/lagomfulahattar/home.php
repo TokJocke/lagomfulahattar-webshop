@@ -1,18 +1,18 @@
 <?php get_header(); ?>  
-<?php get_template_part('navbar'); ?>
+<?php get_template_part('navbar');?>
 
 
 
 
 
-<main class="aligncard">
+<main class="alignCard">
   <h2 class="mainTitle"><?= wp_title("");?></h2> 
 <?php
   while(have_posts()){
     the_post();
     ?>
 
-<article onClick="location.href='<?php the_permalink();?>'" class="card">
+<article id="book" onClick="location.href='<?php the_permalink();?>'" class="card">
   <div class="photoDiv">
     <img class="postThumbnail" src="<?= get_the_post_thumbnail_url(); ?>" >
   </div>
@@ -24,7 +24,6 @@
       <p><?php the_excerpt(); ?></p>
     </div>
     </article>
-
 
     <?php } ?>
 </main>
