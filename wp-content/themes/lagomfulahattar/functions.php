@@ -87,11 +87,4 @@ function banantest() {
 add_shortcode("banan", "banantest");
 
 
-
-
-
-
-
-
-
 ?>
