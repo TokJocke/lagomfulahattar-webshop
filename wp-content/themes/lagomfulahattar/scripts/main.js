@@ -4,7 +4,7 @@ window.addEventListener("load", initSite)
 function initSite() {
   //  scrollFunction()
     flipArrow()
-    console.log("innit done")
+    console.log("innit done blaha")
 }
 
 

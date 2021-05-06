@@ -1,0 +1,13 @@
+
+.singlePost{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1200px;
+  color:#666CCD;
+  margin-top: 20px;
+}
+
+.theBlogContent p{
+  margin: 1em 0;
+}
