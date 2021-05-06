@@ -11,7 +11,7 @@
 </head>
 
 <body>
-   <header>
+   <header id="topHeader">
 
       <div class="headerDiv">
          <a class="logo" href="<?=get_bloginfo("url");?>">
