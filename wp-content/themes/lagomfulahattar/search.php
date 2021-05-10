@@ -6,9 +6,6 @@
 
 <main>
 
-
-<?php get_template_part('parallax'); ?>
-
 <div id="policy-div"">
 
 
