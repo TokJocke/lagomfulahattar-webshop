@@ -8,9 +8,6 @@
 
 <section id="account-section">
 
-
-<?php get_template_part('parallax'); ?>
-
 <div id="mitt-konto">
 
 
