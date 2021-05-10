@@ -1,35 +1,22 @@
-<?php get_header(); ?>  
+<?php
+get_header();
 
+get_template_part('navbar');
 
-<?php get_template_part('navbar'); ?>
+do_action( 'woocommerce_before_main_content' );
 
+?>
+	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+	<?php endif; ?>
 
-
-
-<main>
-<ul class="products">
 	<?php
-		$args = array(
-			'post_type' => 'product',
-			'posts_per_page' => 6
-			);
-		$loop = new WP_Query( $args );
-		if ( $loop->have_posts() ) {
-			while ( $loop->have_posts() ) : $loop->the_post();
-				wc_get_template_part( 'content', 'product' );
-			endwhile;
-		} else {
-			echo __( 'No products found' );
-		}
-		wp_reset_postdata();
+	do_action( 'woocommerce_archive_description' );
 	?>
-</ul><!–/.products–>
+<?php
+		while ( have_posts() ) {
+			the_post();
+				
+ } ?>
 
-</main>
-
-
-
-
-
-
-<?php get_footer(); ?>  
+<?php get_footer(); ?>

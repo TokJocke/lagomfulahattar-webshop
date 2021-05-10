@@ -7,8 +7,10 @@ function load_styles() {
     wp_enqueue_style( 'commonStyle', get_template_directory_uri() . '/style.css', false );
     wp_enqueue_style( 'homeCss', get_template_directory_uri() . '/CSS/home.css', false );
     wp_enqueue_style( 'singleCss', get_template_directory_uri() . '/CSS/single.css', false );
-
-//    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
+    wp_enqueue_style( 'kontakta-oss', get_template_directory_uri() . '/CSS/kontakta-oss.css', false );
+    wp_enqueue_style( 'kontakta-oss', get_template_directory_uri() . '/CSS/kontakta-oss.css', false );
+    wp_enqueue_style( 'single-product', get_template_directory_uri() . '/CSS/single-product.css', false );
+    wp_enqueue_style( 'archive-product', get_template_directory_uri() . '/CSS/archive-product.css', false );
 }
  
 function load_scripts() {
