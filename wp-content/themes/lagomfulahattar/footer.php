@@ -1,6 +1,5 @@
 <!-- </main> -->
-<!--     <i id="arrow" class="fas fa-arrow-down"></i>
- -->   
+ 
     <footer>
 
         <div class="footerTop">
@@ -8,7 +7,7 @@
         </div>
         <div class="footerBottom">
 
-            <div class="logoWrapper">
+            <div class="footerLogoWrapper">
                 <?php dynamic_sidebar("logo"); ?>
             </div>
 

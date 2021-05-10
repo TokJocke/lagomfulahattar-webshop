@@ -19,7 +19,7 @@ function load_styles() {
 }
  
 function load_scripts() {
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts/main.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'scripts-defer', get_template_directory_uri() . '/scripts/main.js', array(), '1.0.0', true );
 }   
 
 //Short code functions
@@ -30,20 +30,14 @@ function banantest() {
     return $inspelning;
 }
 
-/* function sale_shortCode() {
+function couponSlide() {
     ob_start();
-    dynamic_sidebar("on_sale");
+    get_template_part('couponSlide');
     $inspelning = ob_get_clean();
     return $inspelning;
+    
+
 }
-
-function popular_products() {
-    ob_start();
-    dynamic_sidebar("popular_products");
-    $inspelning = ob_get_clean();
-    return $inspelning;
-} */
-
 
 //Widgets
 register_sidebar([
@@ -60,21 +54,6 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
-/* register_sidebar([
-    'name' => 'on sale',
-    'Description' => 'on sale widget area',
-    'id' => 'on_sale',
-    "before_widget" => false,
-]);
-
-register_sidebar([
-    'name' => 'popular products',
-    'Description' => 'campaign slide show',
-    'id' => 'popular_products',
-    "before_widget" => false,
-]);
-
- */
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 add_action( 'wp_enqueue_scripts', 'load_styles' );
@@ -89,16 +68,7 @@ add_theme_support( 'align-wide' );
 
 //ADD shortcodes
 add_shortcode("banan", "banantest");
-/* add_shortcode("onSale", "sale_shortCode");
-add_shortcode("popular", "popular_products"); */
-
-/* 
-add_action("woocommerce_after_widget_product_list", "banan");
-
-
-function banan() {
-    echo "banan";
-} */
+add_shortcode("show_coupons", "couponSlide");
 
 
 //add_filter the_excerpt
@@ -125,14 +95,6 @@ remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 add_action( 'shutdown', function() {
    while ( @ob_end_flush() );
 } );
-
-
-
-
-
-
-
-
 
 
 

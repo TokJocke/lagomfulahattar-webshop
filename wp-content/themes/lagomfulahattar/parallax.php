@@ -15,7 +15,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
             <?php the_content();?>
         </div>
        
-        <i class="fas fa-arrow-down bounce"></i> 
+        <!-- <i class="fas fa-arrow-down bounce"></i> --> 
     </div>
   
 <?php endwhile; ?>
