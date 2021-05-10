@@ -1,5 +1,5 @@
 .related > .products{
-    background-color: violet !important ; 
+    /* background-color: violet !important ;  */
     padding-inline-start: 0px;
     display: flex;
     width: 100%;
@@ -23,8 +23,9 @@
     min-width: 85%;
 }
 .onsale {
-    color: red;
-    font-size: 2vh;
+    font-size: 0vh;
+    margin: 0;
+    padding: 0;
 }
 
 .summary > .entry-summary {
@@ -41,4 +42,60 @@
 .woocommerce-LoopProduct-link > .woocommerce-loop-product__link > .onsale {
     color: red;
     font-size: 0vh;
+}
+
+#tab-description h2{
+    text-decoration: underline;
+}
+#tab-description p{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+main {
+    color:#666CCD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 85%;
+    margin-left: 15%;
+    margin-top: 15vh;
+}
+
+ins > span > bdi {
+    color:#666CCD;
+}
+
+del > span > bdi {
+    font-size: 1.3em;
+    color:#666CCD;
+}
+
+.related > .products h2 {
+    font-size: 2vh;
+    color:#666CCD;
+}
+
+.product_title .entry-title h1 {
+    font-size: 6vh;
+    color:#666CCD;
+}
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    padding: 1em 2em 1em 3.5em;
+    margin: 0 0 2em;
+    position: relative;
+    background-color: #FDD781;
+    color: #666CCD;
+    border: 2px solid #666CCD;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.woocommerce-message a, a:link { 
+    align-items: center;
+    color:#666CCD;
+
+}
+.woocommerce-Price-amount {
+    color: black;
 }

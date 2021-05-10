@@ -76,6 +76,7 @@ add_action( 'shutdown', function() {
    while ( @ob_end_flush() );
 } );
 
+//single page changes
 
 
 
