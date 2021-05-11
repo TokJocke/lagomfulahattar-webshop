@@ -19,6 +19,14 @@ function load_styles()
     //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
 }
 
+add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
+
+function custom_override_checkout_fields($fields)
+{
+
+    return $fields;
+}
+
 function load_scripts()
 {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/scripts/main.js', array(), '1.0.0', true);
