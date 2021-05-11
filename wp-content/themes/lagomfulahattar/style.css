@@ -69,6 +69,7 @@ main {
     max-width: 15%;
     height: 100%;
     z-index: 30;
+
 }
 
 .logoWrapper {
@@ -82,21 +83,28 @@ main {
 #sideNav {
     display: flex;
     flex-direction: column;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+
 }
 
 .menu {
     list-style: none;
     padding-inline-start: 0.3em;
+
+
 }
 
 .menu > li {
     margin-bottom: 1em; 
+
 }
 
-a, a:link, a:visited {
+a, a:link, a:visited {                                                   /* Fixa här! */
     text-decoration: none;
-    font-size: 1.5rem;
-  }
+/*     font-size: 1.5rem;
+ */  }
 
 .linkText {
     font-size: 2rem;
@@ -108,14 +116,16 @@ a, a:link, a:visited {
     flex: 1;
     height: 0.3em;
     max-width: 0em;
-    transition: max-width 0.2s ease-in-out;
+    transition: padding-right 0.2s ease-in-out;
     align-self: center;
     margin-right: 0.1em;
 }
 
 li:hover .linkFloor {
-    max-width: 1.5em;
+    padding-right: 0.5em;
 }
+
+
 
 .menu-item > a {
     display: flex;
@@ -139,6 +149,7 @@ li:hover .linkFloor {
     width: 90%;
     border-radius: 15px;
     margin-bottom: 10vh;
+    color: #666CCD
 /*     margin-top: 5vh;
  */}
 
@@ -156,17 +167,13 @@ li:hover .linkFloor {
 }
 
 
-.parallax:nth-child(even) {
+/* .parallax:nth-child(even) {
     background-color:#03a5c6;
-}
+
+}  */
 
 
-
-/* Generall styling */
-
-
-
-    /* onsale block */
+/* onsale block */
 
     .wc-block-grid > ul {
         justify-content: space-evenly;
@@ -192,7 +199,7 @@ li:hover .linkFloor {
 
 
     del {
-        color: white;
+        color: black;
     }
     
         del > span > bdi {
@@ -202,7 +209,7 @@ li:hover .linkFloor {
     
     
     ins {
-        color: white;
+        color: black;
     }
     
         ins > span > bdi {
@@ -211,16 +218,7 @@ li:hover .linkFloor {
         }
 
 
-.wp-block-button__link {
-    background-color: #666CCD;
-    color: white;
-    border-radius: 10px;
-}
 
-.wp-block-button__link:hover {
-    background-color: white;
-    color: #666CCD;
-}
 
 .wc-block-grid__product-onsale {
     position: absolute;
@@ -242,11 +240,15 @@ li:hover .linkFloor {
 .wc-block-grid__product-price {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: 1em;
+    border-radius: 15px;
 }
+
 
 /* Footer */
 
-footer {
+/* footer {
     background-color: rgba(255, 127, 80, 0.616);
     display: flex;
     position: relative;
@@ -255,18 +257,216 @@ footer {
     min-height: 85vh;
     padding: 2em;
     padding-left: 15%;
+    
+} */
+
+footer {/* Alternativ 2 */
+    background-color: rgb(255, 151, 113);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2em;
+    z-index: 50;
+
 }
-
     .footerTop {
-
+        display: flex;
+        width: 100%;
     }
 
     .footerBottom {
         display:flex;
-        position: absolute;
-        bottom: 0;
-        right: 50%;
-     
+
+        width: 100%;      
+        justify-content: center;
+}
+
+.footerLogoWrapper {
+    object-fit: contain;
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+
 }
 
 
+/* Utvald produkt */
+
+.wc-block-featured-product {
+    min-height: 50% !important;
+    height: 80%;
+    margin: 2em 0;
+    border-radius: 15px;
+   
+}
+
+.wc-block-featured-product__wrapper {
+    flex-direction: column;
+}
+
+.wc-block-featured-product.has-background-dim:before {
+    border-radius: 15px;
+}
+
+.wc-block-featured-product__title {
+    display: flex;
+    justify-content: center;
+    padding: 1em !important;
+    background-color: #666CCD;
+    border-radius: 25px;
+    font-size: 2em;
+}
+
+
+
+/* Senaste blogginlägg block */
+
+.wp-block-latest-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+    padding-inline-start: 0;
+    height: 85%;
+}
+
+.wp-block-latest-posts > li {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    align-items: center;
+    border: 2px solid #FDD781;
+    border-radius: 15px;
+    background-color: #666CCD;
+    color: white;
+}
+
+.wp-block-latest-posts > li > * {
+    color: white;
+    text-align: center;
+}
+
+
+.wp-block-latest-posts__featured-image > a {
+    display: flex;
+    justify-content: center;
+}
+
+.wp-block-latest-posts__featured-image > a > img {
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+
+}
+
+.wp-block-latest-posts__post-excerpt {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+
+}
+
+/* ProductSlider */
+
+.wcps-container {
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    max-width: 20vw !important; 
+    max-height: 100%;
+    border: 2px solid #FDD781;
+    border-radius: 15px;
+    padding: 1em; 
+    margin: 0 0.5em 0 0.5em;
+}
+
+.add_to_cart_inline {
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    text-align: center;
+
+}   
+
+.add_to_cart_inline > a {  
+    padding-top: 0 !important;
+}
+
+.add_to_cart_inline > .add_to_cart_button {
+    background-color: #666CCD !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 0.5em !important;
+    text-align: center;
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center;
+}
+
+.add_to_cart_inline > a:hover {
+    background-color: white !important;
+    color: #666CCD !important;
+}
+
+.wcps-items-price {
+    text-align: center;
+    margin: 0.5em 0em 0.5em 0em;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+/* Generall styling */
+
+.wp-block-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.wp-block-button__link {
+    background-color: #666CCD;
+    color: white;
+    border-radius: 10px;
+}
+
+.wp-block-button__link:hover {
+    background-color: white;
+    color: #666CCD;
+}
+
+.added_to_cart {
+    background-color: lightgreen;
+    color: white;
+    margin-top: 0.5em;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.wcps-items-title {
+    display: flex;
+    justify-content: center;
+}
+
+.wcps-items-title > a, .wc-block-grid__product-title {
+    color: #666CCD;
+    font-size: 1.5rem;
+    
+}

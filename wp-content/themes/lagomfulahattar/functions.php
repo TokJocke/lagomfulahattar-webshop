@@ -21,6 +21,7 @@ function load_styles()
     //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
 }
 
+
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 
 function custom_override_checkout_fields($fields)
@@ -35,10 +36,6 @@ function load_scripts()
 }
 
 //Short code functions
-
-
-
-
 
 
 //Widgets
@@ -56,6 +53,22 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
+
+register_sidebar([
+    'name' => 'footer top',
+    'Description' => 'footer top area',
+    'id' => 'footer_top',
+    "before_widget" => false,
+]);
+
+register_sidebar([
+    'name' => 'footer bottom',
+    'Description' => 'footer bottom area',
+    'id' => 'footer_bottom',
+    "before_widget" => false,
+]);
+
+
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_theme_support('post-thumbnails');
@@ -65,10 +78,10 @@ add_theme_support("widgets");
 add_theme_support('wp-block-styles');
 
 // Add support for full and wide align images.
+
+//ADD shortcodes
+
 add_theme_support('align-wide');
-
-
-
 
 //add_filter the_excerpt
 function wpdocs_custom_excerpt_length($length)
@@ -95,6 +108,7 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 
 
 //single page changes
+
 
 
 

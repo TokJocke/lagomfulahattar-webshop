@@ -2,8 +2,10 @@ window.addEventListener("load", initSite)
 
 
 function initSite() {
-  //  scrollFunction()
-    flipArrow()
+  
+    createArrow()
+   
+   // flipArrow()
     console.log("innit done blaha")
 }
 
@@ -16,31 +18,37 @@ let productContainers = document.getElementsByClassName("wc-block-grid__products
 
 
 
-function flipArrow() {
-    for(let i = 0; i < productContainers.length; i++) {
-        let children = productContainers[i].childNodes
-        let lastChild = children[children.length-1]
-        console.log("lastChild " , lastChild)
-        let notLastChild = children[children.length-4]
-        console.log("notLastChild ", notLastChild)
-        objectInView(notLastChild, "fas fa-arrow-down bounce")
-        objectInView(lastChild, "fas fa-arrow-down rotate") 
-    }
+function createArrow() {
+    let container = document.getElementsByClassName("wc-block-grid__products")
+    for(let i = 0; i < container.length; i++) {
+        let children = container[i].childNodes
+        if(children.length > 3) {
+            let topParent = container[i].parentNode.parentNode.parentNode
+            let arrow = document.createElement("i")
+            arrow.classList = "fas fa-arrow-down bounce"
+            topParent.appendChild(arrow)
+            flipArrow(children)
+      }
+}
 
 }
 
-
+function flipArrow(children) {
+  let lastChild = children[children.length-1]
+  let notLastChild = children[children.length-4]
+  objectInView(lastChild, "fas fa-arrow-down rotate")
+  objectInView(notLastChild, "fas fa-arrow-down bounce")
+} 
 
 function objectInView(param, addClass) {
     
     let observer = new IntersectionObserver((entries, observer) => { 
       entries.forEach(entry => {
         if(entry.isIntersecting){
-                console.log("scrollTarget: ", entry.target)
                 let parent = entry.target.parentNode.parentNode.parentNode.parentNode
                 let childrenOfParent = parent.childNodes
-                let arrow = childrenOfParent[3]
-                console.log("arrow: ", arrow)
+                let arrow = childrenOfParent[childrenOfParent.length-1]
+             //   console.log("arrow: ", arrow)
                 arrow.classList = addClass
         }
     });
