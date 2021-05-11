@@ -30,14 +30,7 @@ function banantest() {
     return $inspelning;
 }
 
-function couponSlide() {
-    ob_start();
-    get_template_part('couponSlide');
-    $inspelning = ob_get_clean();
-    return $inspelning;
-    
 
-}
 
 //Widgets
 register_sidebar([
@@ -54,6 +47,19 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
+register_sidebar([
+    'name' => 'footer top',
+    'Description' => 'footer top area',
+    'id' => 'footer_top',
+    "before_widget" => false,
+]);
+
+register_sidebar([
+    'name' => 'footer bottom',
+    'Description' => 'footer bottom area',
+    'id' => 'footer_bottom',
+    "before_widget" => false,
+]);
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 add_action( 'wp_enqueue_scripts', 'load_styles' );
