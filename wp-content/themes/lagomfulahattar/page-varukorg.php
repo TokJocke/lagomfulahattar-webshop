@@ -1,4 +1,4 @@
-<?php get_header(); ?>  
+<?php get_header(); ?>
 
 
 
@@ -9,21 +9,21 @@
 
 
 <main class="align-center margin-left">
-<div class="main-content">
+    <div class="main-content">
 
-<?php
- 
- 
-  
- while ( have_posts() ) {
-     the_post();
-     the_content();
- }
-  
- ?>
-  
-    
-</div>
+        <?php
+
+
+
+        while (have_posts()) {
+            the_post();
+            the_content();
+        }
+
+        ?>
+
+
+    </div>
 </main>
 
 
@@ -31,4 +31,4 @@
 
 
 
-<?php get_footer(); ?>  
+<?php get_footer(); ?>
