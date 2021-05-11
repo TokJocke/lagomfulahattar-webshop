@@ -62,7 +62,7 @@
 
 
 
-    del {
+/*     del {
         color: black;
     }
     
@@ -79,12 +79,12 @@
         ins > span > bdi {
             font-size: 1.3em;
             color: green;
-        }
+        } */
 
 
 
 
-.wc-block-grid__product-onsale {
+/* .wc-block-grid__product-onsale {
     position: absolute;
     border-radius: 50%;
     width: 3em;
@@ -96,8 +96,8 @@
     right: 0.2em;
     background-color: lightgreen;
 }
-
-.wc-block-grid__product-onsale > span {
+ */
+/* .wc-block-grid__product-onsale > span {
     color: black;
 }
 
@@ -107,7 +107,7 @@
     background-color: white;
     padding: 1em;
     border-radius: 15px;
-}
+} */
 
 
 
@@ -251,7 +251,7 @@
 
 /* Generall styling */
 
-.wp-block-button {
+/* .wp-block-button {
     display: flex;
     flex-direction: column;
 }
@@ -273,7 +273,7 @@
     margin-top: 0.5em;
     border-radius: 10px;
     font-size: 1rem;
-}
+} */
 
 .wcps-items-title {
     display: flex;
