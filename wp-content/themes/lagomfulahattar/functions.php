@@ -9,10 +9,12 @@ function load_styles()
     wp_enqueue_style('homeCss', get_template_directory_uri() . '/CSS/home.css', false);
     wp_enqueue_style('singleCss', get_template_directory_uri() . '/CSS/single.css', false);
     wp_enqueue_style('butiker', get_template_directory_uri() . '/CSS/butiker.css', false);
-    wp_enqueue_style('kontakt', get_template_directory_uri() . '/CSS/kontakt.css', false);
+    wp_enqueue_style( 'kontakta-oss', get_template_directory_uri() . '/CSS/kontakta-oss.css', false );
     wp_enqueue_style('policy', get_template_directory_uri() . '/CSS/policy.css', false);
     wp_enqueue_style('varukorg', get_template_directory_uri() . '/CSS/varukorg.css', false);
     wp_enqueue_style('widgetsAndIcons', get_template_directory_uri() . '/CSS/widgetsAndIcons.css', false);
+    wp_enqueue_style( 'single-product', get_template_directory_uri() . '/CSS/single-product.css', false );
+    wp_enqueue_style( 'archive-product', get_template_directory_uri() . '/CSS/archive-product.css', false );
 
     wp_enqueue_style('kassaCss', get_template_directory_uri() . '/CSS/kassa.css', false);
 
@@ -41,19 +43,8 @@ function banantest()
     return $inspelning;
 }
 
-/* function sale_shortCode() {
-    ob_start();
-    dynamic_sidebar("on_sale");
-    $inspelning = ob_get_clean();
-    return $inspelning;
-}
 
-function popular_products() {
-    ob_start();
-    dynamic_sidebar("popular_products");
-    $inspelning = ob_get_clean();
-    return $inspelning;
-} */
+
 
 
 //Widgets
@@ -71,26 +62,7 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
-/* register_sidebar([
-    'name' => 'on sale',
-    'Description' => 'on sale widget area',
-    'id' => 'on_sale',
-    "before_widget" => false,
-]);
 
-register_sidebar([
-    'name' => 'popular products',
-    'Description' => 'campaign slide show',
-    'id' => 'popular_products',
-    "before_widget" => false,
-]);
-
- */
-
-
-
-add_action('wp_enqueue_scripts', 'load_scripts');
-add_action('wp_enqueue_scripts', 'load_styles');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('woocommerce');
@@ -100,18 +72,7 @@ add_theme_support('wp-block-styles');
 // Add support for full and wide align images.
 add_theme_support('align-wide');
 
-//ADD shortcodes
-add_shortcode("banan", "banantest");
-/* add_shortcode("onSale", "sale_shortCode");
-add_shortcode("popular", "popular_products"); */
 
-/* 
-add_action("woocommerce_after_widget_product_list", "banan");
-
-
-function banan() {
-    echo "banan";
-} */
 
 
 //add_filter the_excerpt
@@ -136,7 +97,29 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
  * This replaces the WordPress `wp_ob_end_flush_all()` function
  * with a replacement that doesn't cause PHP notices.
  */
+
+
+//single page changes
+
+
+
+function banantest() {
+    ob_start();
+    dynamic_sidebar("logo");
+    $inspelning = ob_get_clean();
+    return $inspelning;
+}
+
+add_shortcode("banan", "banantest");
+
+
+
 remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 add_action('shutdown', function () {
     while (@ob_end_flush());
 });
+
+?>
+
+
+
