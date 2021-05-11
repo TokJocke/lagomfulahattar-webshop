@@ -4,5 +4,8 @@ Arbetslogg Anton
 3/5. jag läste på om plugin wp google maps för att enkelt kunna pinpointa våra "fysiska" butiker. testade dessutom att skriva ut kartan och de funkade efter många om och men.
 4/5. Fixade sidan för single-shop_page (vår butik sidan), samt taxonomy(de enskilda butikerna). stylade och gjorde klart det. gjorde det användarvänligt så att du enkelt kan ändra innehållet på sidan.
 5/5.  fixade sidan för varukorgen och stylade den
+6/5. började kolla på hur man gör frakt plugin
+10/5. kämpat vidare med frakt plugin, mycket problem som upptått
+11/5. vi tror och hoppas att frakt plugin funkar med olika fraktklasser samt fraktzoner.
 
 
