@@ -8,12 +8,13 @@ function load_styles()
     wp_enqueue_style('commonStyle', get_template_directory_uri() . '/style.css', false);
     wp_enqueue_style('homeCss', get_template_directory_uri() . '/CSS/home.css', false);
     wp_enqueue_style('singleCss', get_template_directory_uri() . '/CSS/single.css', false);
+    wp_enqueue_style('single-product', get_template_directory_uri() . '/CSS/single-product.css', false);
     wp_enqueue_style('butiker', get_template_directory_uri() . '/CSS/butiker.css', false);
     wp_enqueue_style('kontakt', get_template_directory_uri() . '/CSS/kontakt.css', false);
+    wp_enqueue_style('kontakta-oss', get_template_directory_uri() . '/CSS/kontakta-oss.css', false);
     wp_enqueue_style('policy', get_template_directory_uri() . '/CSS/policy.css', false);
     wp_enqueue_style('varukorg', get_template_directory_uri() . '/CSS/varukorg.css', false);
     wp_enqueue_style('widgetsAndIcons', get_template_directory_uri() . '/CSS/widgetsAndIcons.css', false);
-
     wp_enqueue_style('kassaCss', get_template_directory_uri() . '/CSS/kassa.css', false);
 
     //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
