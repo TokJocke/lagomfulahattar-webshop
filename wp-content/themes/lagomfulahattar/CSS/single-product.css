@@ -14,15 +14,21 @@
     width: 100%;
     height: 35vh;
 }
+/* produktkorten */
 .product{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
 }
 .apa{
-    width: auto;
-    background-color: rgba(240, 128, 128);
+    width: 100%;
+    background-color: rgb(109, 217, 236);
+    display: flex;
 }
+
 .woocommerce-breadcrumb{
     min-width: 85%;
 }
@@ -37,7 +43,7 @@
     min-width: 85%;
     margin-left: auto;
 }
-
+/* Bildens storlek */
 .wp-post-image{
     width: 100%;
     height: 50vh;
@@ -83,6 +89,7 @@ del > span > bdi {
     font-size: 6vh;
     color:#666CCD;
 }
+/* lägga till,ta bort varor popup */
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     padding: 1em 2em 1em 3.5em;
     margin: 0 0 2em;
@@ -94,8 +101,14 @@ del > span > bdi {
     width: auto;
     word-wrap: break-word;
 }
-
-
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
 .woocommerce-message a, a:link { 
     align-items: center;
     color:#666CCD;
