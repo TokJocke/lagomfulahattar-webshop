@@ -2,6 +2,7 @@
 .wc-block-grid__products .wc-block-grid__product-image img {
     width: 100%;
     height: 30vh;
+    object-fit: contain;
 }
 .product{
     display: flex;

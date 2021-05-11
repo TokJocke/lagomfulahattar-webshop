@@ -13,6 +13,7 @@
 .wc-block-grid__products .wc-block-grid__product-image img {
     width: 100%;
     height: 35vh;
+    object-fit: contain;
 }
 /* produktkorten */
 .product, .related{
