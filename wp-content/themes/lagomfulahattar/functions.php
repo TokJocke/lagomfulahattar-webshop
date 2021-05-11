@@ -20,6 +20,7 @@ function load_styles()
     //    wp_enqueue_style( 'animations', get_template_directory_uri() . './css/animation.css', false );
 }
 
+
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 
 function custom_override_checkout_fields($fields)
@@ -66,10 +67,10 @@ add_theme_support("widgets");
 add_theme_support('wp-block-styles');
 
 // Add support for full and wide align images.
+
+//ADD shortcodes
+
 add_theme_support('align-wide');
-
-
-
 
 //add_filter the_excerpt
 function wpdocs_custom_excerpt_length($length)
