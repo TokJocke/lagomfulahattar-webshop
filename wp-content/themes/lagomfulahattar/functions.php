@@ -58,6 +58,9 @@ function load_styles_and_scripts()
     else if ( basename( $template ) === 'page-integritetspolicy.php' ) {
         wp_enqueue_style( 'policy' );
     }
+    else if ( basename( $template ) === 'single.php' ) {
+        wp_enqueue_style( 'singleCss' );
+    }
 
 }
 
