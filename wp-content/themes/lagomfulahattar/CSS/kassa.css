@@ -6,6 +6,10 @@
 .kassaThecontent{
   color:#666CCD;
   max-width: 1200px;
+ 
+}
+.woocommerce p {
+  margin: 1em;
 }
 
 .kassaThecontent input{
@@ -17,6 +21,7 @@
   font-size: 1.2em;
   font-weight:200;
 }
+
 
 .kassaThecontent input:focus, input:active{
   transition: background-color .3s;

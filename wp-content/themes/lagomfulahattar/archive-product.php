@@ -1,21 +1,21 @@
-<?php get_header(); ?>  
+<?php
+get_header();
 
-
-<?php get_template_part('navbar'); ?>
-
-
-
+get_template_part('navbar'); ?>
 
 <main>
-<?php get_template_part('parallax'); ?>
+	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+	<?php endif; ?>
 
-</div>
-
+	<?php
+	do_action( 'woocommerce_archive_description' );
+	?>
+	
+<?php
+		while ( have_posts() ) {
+			the_post();
+				
+ } ?>
 </main>
-
-
-
-
-
-
-<?php get_footer(); ?>  
+<?php get_footer();
