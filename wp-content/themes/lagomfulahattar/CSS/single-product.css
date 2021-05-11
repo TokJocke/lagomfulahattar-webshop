@@ -19,6 +19,10 @@
     flex-direction: column;
     align-items: flex-start;
 }
+.apa{
+    width: auto;
+    background-color: rgba(240, 128, 128);
+}
 .woocommerce-breadcrumb{
     min-width: 85%;
 }
@@ -91,11 +95,13 @@ del > span > bdi {
     word-wrap: break-word;
 }
 
+
 .woocommerce-message a, a:link { 
     align-items: center;
     color:#666CCD;
+    font-size: 1rem;
 
 }
 .woocommerce-Price-amount {
-    color: black;
+    color: #666CCD;
 }

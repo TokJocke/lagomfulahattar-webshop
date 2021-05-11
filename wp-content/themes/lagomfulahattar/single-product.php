@@ -3,7 +3,7 @@
 <?php get_template_part('navbar'); ?>
 
 	<main>
-		<div>
+		<div class="apa">
 			<?php while ( have_posts() ) : ?> 
 				<?php the_post(); ?>
 			
