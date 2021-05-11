@@ -4,7 +4,7 @@
 function load_styles()
 {
     wp_enqueue_style('animations', get_template_directory_uri() . '/CSS/animation.css', false);
-    wp_enqueue_style('styleForMyAcc', get_template_directory_uri() . '/myacc.css', false);
+    wp_enqueue_style('styleForMyAcc', get_template_directory_uri() . '/CSS/myacc.css', false);
     wp_enqueue_style('commonStyle', get_template_directory_uri() . '/style.css', false);
     wp_enqueue_style('homeCss', get_template_directory_uri() . '/CSS/home.css', false);
     wp_enqueue_style('singleCss', get_template_directory_uri() . '/CSS/single.css', false);
@@ -35,13 +35,7 @@ function load_scripts()
 }
 
 //Short code functions
-function banantest()
-{
-    ob_start();
-    dynamic_sidebar("logo");
-    $inspelning = ob_get_clean();
-    return $inspelning;
-}
+
 
 
 
@@ -62,7 +56,8 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
-
+add_action( 'wp_enqueue_scripts', 'load_scripts' );
+add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('woocommerce');
