@@ -193,6 +193,3 @@ add_action('shutdown', function () {
 });
 
 ?>
-
-
-
