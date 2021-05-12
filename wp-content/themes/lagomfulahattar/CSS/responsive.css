@@ -247,4 +247,18 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .related > ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .related > ul > li {
+        max-width: 100%;
+        border: 2px solid #666CCD;
+        border-radius: 10px;
+        background-color: rgba(240, 128, 128);
+        margin-bottom: 1em;
+    }
 }

@@ -37,9 +37,7 @@ get_header(); ?>
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
-	<?php
-		get_template_part('navbar');
-	?>
+
 
 <?php
 get_footer();
