@@ -1,6 +1,9 @@
 .content {
-margin-right: 15%;
-padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+padding: 10px; 
 }
 
 span.onsale {
