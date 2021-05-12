@@ -1,7 +1,9 @@
 
 .kassaMargin{
-  margin-left: 5vw;
+  margin-left: 15vw;
   align-items: center;
+  max-width: 85%;
+  padding: 2em;
 }
 .kassaThecontent{
   color:#666CCD;

@@ -28,6 +28,7 @@
 .mapsForm textarea, input, select, option {
     background-color: #666bcd9a;
     color: #FDD781;
+    resize: none;
 }
 
 .wpcf7-submit {
