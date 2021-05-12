@@ -126,7 +126,10 @@ li:hover .linkFloor {
     padding-right: 0.5em;
 }
 
+.current_page_item > a > .linkFloor {
+    padding-right: 0.5em;
 
+}
 
 .menu-item > a {
     display: flex;
@@ -326,3 +329,14 @@ ins {
     display: none;
 }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    padding: 1em 2em 1em 3.5em;
+    margin: 0 0 2em;
+    position: relative;
+    background-color: #FDD781;
+    color: #666CCD;
+    border: 2px solid #666CCD;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+}
