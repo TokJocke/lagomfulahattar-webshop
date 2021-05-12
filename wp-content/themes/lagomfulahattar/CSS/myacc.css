@@ -1,0 +1,97 @@
+#account-section {    
+   
+    display: flex;
+    flex-direction: column;
+    min-width: 85%;
+    margin-left: 15%;
+    margin-top: 10vh;
+    height: 100%;
+    margin-top: 15vh;
+    margin-bottom: 2em;
+}
+
+nav.woocommerce-MyAccount-navigation > ul {
+ 
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  display: flex;
+  list-style: none;
+  font-size: 1.5rem;
+  
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li {
+  
+  margin: 10px;
+
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li > a {
+
+color: #666CCD;
+
+}
+
+
+nav.woocommerce-MyAccount-navigation > ul > li > a:hover{
+  
+  text-decoration: underline;
+  color:  white;
+
+}
+
+nav.woocommerce-MyAccount-navigation {
+  
+  display: flex;
+  justify-content: center;
+
+}
+
+.u-columns {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.u-column1, .u-column2 {
+  width: 100%;
+  background-color: rgba(240, 128, 128);
+  border: 2px solid #666CCD;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.u-column1 {
+  margin-bottom: 2em;
+}
+
+/* .woocommerce .col2-set, .woocommerce-page .col2-set {
+    margin-top: 10px;
+    margin-left: 15px;
+} 
+  
+form.woocommerce-form.woocommerce-form {
+      border: none;
+      margin-top: -20px;
+}
+  
+
+  
+
+
+
+  
+  div#customer_login.u-columns.col2-set {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+  
+  .woocommerce-MyAccount-content > p > a {
+      color: rgba(17, 0, 255, 0.76);
+      text-decoration: underline;
+}
+
+ */

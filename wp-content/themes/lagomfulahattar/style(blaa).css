@@ -1,0 +1,53 @@
+/* 
+Theme name: lagom fula hattar theme
+Author: Jocke, Sebbe, Robin, Anton & Victor
+*/
+
+<div class="parallaxImg" style="background-image: url(<?= get_the_post_thumbnail_url();?>)"></div>
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body{ 
+    min-height: 100vh;
+    overflow :auto;
+    background-color: tomato;
+}
+
+#sideNavBar {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+}
+
+header {
+    background-color: green;
+    display: flex;
+    width: 85%;
+    height: 10%;
+    margin-left: 15%;
+    position: fixed;
+}
+
+main {
+    background-color: thistle;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-left: 15%;
+    margin-top: 10vh;
+}
+
+.parallax {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
