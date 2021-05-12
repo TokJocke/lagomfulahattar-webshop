@@ -21,15 +21,21 @@ function load_styles_and_scripts()
     wp_register_style( 'archive-product', get_template_directory_uri() . '/CSS/archive-product.css', array(), "", false );
     wp_register_style('kassaCss', get_template_directory_uri() . '/CSS/kassa.css', array(), "", false);
     wp_register_style('butiker', get_template_directory_uri() . '/CSS/butiker.css', array(), "", false);
+
+    wp_register_style('responsive', get_template_directory_uri() . '/CSS/responsive.css', array(), "", false);
+
+    wp_register_style('productCat', get_template_directory_uri() . '/CSS/productCategory.css', array(), "", false);
+
     
     wp_enqueue_style( 'commonStyle' );
     wp_enqueue_style( 'widgetsAndIcons' );
-    
+    wp_enqueue_script('togglescripts', get_template_directory_uri() . '/scripts/togglenav.js', array(), '1.0.0', true);
+
     if ( basename( $template ) === 'index.php' ) {
         wp_enqueue_style( 'indexStyle' );
         wp_enqueue_style( 'animations' );
         wp_enqueue_script('scripts', get_template_directory_uri() . '/scripts/main.js', array(), '1.0.0', true);
-
+        
     }
     else if ( basename( $template ) === 'single-shop_page.php' ) {
         wp_enqueue_style( 'butiker' );
@@ -61,7 +67,11 @@ function load_styles_and_scripts()
     else if ( basename( $template ) === 'single.php' ) {
         wp_enqueue_style( 'singleCss' );
     }
-
+    else if ( basename( $template ) === 'taxonomy-product-cat.php' ) {
+        wp_enqueue_style( 'productCat' );
+    }
+  
+    wp_enqueue_style( 'responsive' );
 }
 
 
@@ -75,9 +85,6 @@ function custom_override_checkout_fields($fields)
 
 
 //Short code functions
-
-
-
 
 
 //Widgets
@@ -110,9 +117,23 @@ register_sidebar([
     "before_widget" => false,
 ]);
 
+register_sidebar([
+    'name' => 'footer bottom',
+    'Description' => 'footer bottom area',
+    'id' => 'footer_bottom',
+    "before_widget" => false,
+]);
 
-add_action('wp_enqueue_scripts', 'load_scripts');
-add_action('wp_enqueue_scripts', 'load_styles');
+register_sidebar([
+    'name' => 'footer social menu',
+    'Description' => 'footer social menu',
+    'id' => 'footer_social_menu',
+    "before_widget" => false,
+]);
+
+
+
+add_action( 'wp_enqueue_scripts', 'load_styles_and_scripts' );
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('woocommerce');
@@ -148,7 +169,27 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
  * This replaces the WordPress `wp_ob_end_flush_all()` function
  * with a replacement that doesn't cause PHP notices.
  */
+
+
+//single page changes
+
+
+
+
+function banantest() {
+    ob_start();
+    dynamic_sidebar("logo");
+    $inspelning = ob_get_clean();
+    return $inspelning;
+}
+
+add_shortcode("banan", "banantest");
+
+
+
 remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 add_action('shutdown', function () {
     while (@ob_end_flush());
 });
+
+?>
