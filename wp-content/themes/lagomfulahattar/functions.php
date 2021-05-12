@@ -21,6 +21,7 @@ function load_styles_and_scripts()
     wp_register_style( 'archive-product', get_template_directory_uri() . '/CSS/archive-product.css', array(), "", false );
     wp_register_style('kassaCss', get_template_directory_uri() . '/CSS/kassa.css', array(), "", false);
     wp_register_style('butiker', get_template_directory_uri() . '/CSS/butiker.css', array(), "", false);
+    wp_register_style('productCat', get_template_directory_uri() . '/CSS/productCategory.css', array(), "", false);
     
     wp_enqueue_style( 'commonStyle' );
     wp_enqueue_style( 'widgetsAndIcons' );
@@ -61,6 +62,10 @@ function load_styles_and_scripts()
     else if ( basename( $template ) === 'single.php' ) {
         wp_enqueue_style( 'singleCss' );
     }
+    else if ( basename( $template ) === 'taxonomy-product-cat.php' ) {
+        wp_enqueue_style( 'productCat' );
+    }
+    
 
 }
 
