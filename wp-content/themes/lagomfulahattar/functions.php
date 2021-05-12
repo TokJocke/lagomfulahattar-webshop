@@ -21,15 +21,17 @@ function load_styles_and_scripts()
     wp_register_style( 'archive-product', get_template_directory_uri() . '/CSS/archive-product.css', array(), "", false );
     wp_register_style('kassaCss', get_template_directory_uri() . '/CSS/kassa.css', array(), "", false);
     wp_register_style('butiker', get_template_directory_uri() . '/CSS/butiker.css', array(), "", false);
+    wp_register_style('responsive', get_template_directory_uri() . '/CSS/responsive.css', array(), "", false);
     
     wp_enqueue_style( 'commonStyle' );
     wp_enqueue_style( 'widgetsAndIcons' );
-    
+    wp_enqueue_script('togglescripts', get_template_directory_uri() . '/scripts/togglenav.js', array(), '1.0.0', true);
+
     if ( basename( $template ) === 'index.php' ) {
         wp_enqueue_style( 'indexStyle' );
         wp_enqueue_style( 'animations' );
         wp_enqueue_script('scripts', get_template_directory_uri() . '/scripts/main.js', array(), '1.0.0', true);
-
+        
     }
     else if ( basename( $template ) === 'single-shop_page.php' ) {
         wp_enqueue_style( 'butiker' );
@@ -61,7 +63,8 @@ function load_styles_and_scripts()
     else if ( basename( $template ) === 'single.php' ) {
         wp_enqueue_style( 'singleCss' );
     }
-
+    
+    wp_enqueue_style( 'responsive' );
 }
 
 
