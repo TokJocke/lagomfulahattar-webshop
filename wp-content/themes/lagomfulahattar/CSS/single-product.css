@@ -1,155 +1,101 @@
-.related > .products{
-    /* background-color: violet !important ;  */
-    padding-inline-start: 0px;
+.product {
     display: flex;
-    width: 80%;
-}
-.related > .products h2 {
-    font-size: 2vh;
-    color: teal;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    padding: 0 2em 0 2em;
+    color: #666CCD;
 }
 
-/*Webbutik styling produkter*/
-.wc-block-grid__products .wc-block-grid__product-image img {
-    width: 100%;
-    height: 35vh;
-    object-fit: contain;
+a {
+    color: #666CCD;
 }
-/* produktkorten */
-.product, .related{
+
+a:hover {
+    color: white;
+}
+
+.single_add_to_cart_button {
+    background-color: #666CCD;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5em ;
+    text-align: center;
     display: flex;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: auto;
+    width: 100% ;
+    justify-content: center;
+    border: none;
+    margin: 0.5em 0 0.5em 0;
+    cursor: pointer;
 }
-.apa{
-    width: 100%;
-    margin: 0;
-    padding: 0;
+
+.single_add_to_cart_button:hover {
+    background-color: white;
+    color: #666CCD;
 }
-/* ta bort sale texten från "related products" */
-.onsale {
-    font-size: 0vh;
-    margin: 0;
-    padding: 0;
-}
-.woocommerce-LoopProduct-link > .woocommerce-loop-product__link > .onsale {
-    color: red;
-    font-size: 0vh;
-}
-/* namn och pris */
-.summary, .entry-summary {
-    display: flex;
-    border: 2px solid #666CCD;
-    margin: 10px;
-    padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-}
+
 
 .entry-summary {
     font-size: 2vh;
-}
-.entry-summary button {
-    background-color: #666CCD;
-    color: white;
-    width: 8vw;
-    padding: 1vh;
-    margin-top:1vh;
-    margin-bottom:1vh;
-    height: 100%;
-    border: none;
-}
-/* Bildens storlek */
-.wp-post-image{
-    width: 100%;
-    height: 50vh;
-}
-
-#tab-description{
+    max-width: 100%;
+    min-width: 100%;
     border: 2px solid #666CCD;
-    padding: 40px;
-}
-#tab-description h2{
-    text-decoration: underline;
-}
-
-
-#main {
-    color:#666CCD;
+    margin: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 85%;
-    margin-left: 15%;
-    margin-top: 15vh;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128);
 }
 
-ins > span > bdi {
-    color:#666CCD;
-}
-
-del > span > bdi {
-    font-size: 1.3em;
-    color:#666CCD;
-}
-
-.related > .products h2 {
-    font-size: 2vh;
-    color:#666CCD;
-}
-
-.product_title .entry-title h1 {
-    font-size: 6vh;
-    color:#666CCD;
-}
-/* lägga till,ta bort varor popup */
-.woocommerce-error, .woocommerce-info, .woocommerce-message {
-    padding: 1em 2em 1em 3.5em;
-    margin: 0 0 2em;
-    position: relative;
-    background-color: #FDD781;
-    color: #666CCD;
+.woocommerce-product-gallery  {
+    max-width: 100%;
+    min-width: 100%;
     border: 2px solid #666CCD;
-    list-style: none outside;
-    width: auto;
-    word-wrap: break-word;
-}
-.woocommerce-message a, a:link {
-    align-items: center;
-    color:#666CCD;
-    font-size: 1rem;
-}
-.woocommerce-Price-amount {
-    color: #666CCD;
-}
-/* "related products" */
-.woocommerce-LoopProduct-link, .woocommerce-loop-product__link {
-    border: 2px solid #666CCD;
-    margin: 20px;
-    padding: 20px;
-}
-.product_type_simple, .add_to_cart_button{
-    border: 2px solid #666CCD;
-    margin: 10px;
-    padding: 10px;
-}
-.related  h2{
-    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128);
 }
 
-.tabs{
-    margin: 20px;
+.woocommerce-tabs {
+    max-width: 100%;
+    min-width: 100%;
     border: 2px solid #666CCD;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 3em;
+    background-color: rgba(240, 128, 128);
+
 }
-.wc-tabs a{
-font-size: 3vh;
+
+.related {
+    width: 100%;
+    margin-bottom: 3em;
 }
-.wc-tabs li{
-    font-size: 0;
+
+.related > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: space-between;
+    padding-inline-start: 0;
+}
+
+.related > ul > li {
+    max-width: 45%;
+    border: 2px solid #666CCD;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128);
+
+}
+
+.onsale {
+    display: none;
 }
