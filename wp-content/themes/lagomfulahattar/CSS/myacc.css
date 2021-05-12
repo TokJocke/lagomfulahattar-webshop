@@ -4,7 +4,7 @@
     min-width: 85%;
     margin-left: 15%;
     margin-top: 10vh;
-    height: 80vh;
+    height: 100vh;
     margin-top: 10%;
 }
 
@@ -18,15 +18,15 @@
     margin-left: 15px;
 } 
   
-  form.woocommerce-form.woocommerce-form {
+form.woocommerce-form.woocommerce-form {
       border: none;
       margin-top: -20px;
-  }
+}
   
   nav.woocommerce-MyAccount-navigation {
      margin-top: 30px;
      margin-left: 15%;
-  }
+}
   
   nav.woocommerce-MyAccount-navigation > ul {
       display: flex;
@@ -34,16 +34,16 @@
       /* flex-wrap: wrap; */
       list-style: none;
       margin: 10px;
-  }
+}
   
   nav.woocommerce-MyAccount-navigation > ul > li {
       margin: 10px;
-  }
+}
   
   nav.woocommerce-MyAccount-navigation > ul > li > a:hover{
       text-decoration: underline;
       color: blue;
-  }
+}
 
 
   
@@ -52,9 +52,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-  }
+}
   
   .woocommerce-MyAccount-content > p > a {
       color: rgba(17, 0, 255, 0.76);
       text-decoration: underline;
-  }
+}
+
