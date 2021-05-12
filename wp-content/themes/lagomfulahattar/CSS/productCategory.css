@@ -6,12 +6,14 @@
 padding: 10px; 
 }
 
+
 span.onsale {
     display: none;
 }
 
 .woocommerce-loop-product__title {
     text-align: center;
+    color: #666CCD;
 }
 
 .woocommerce-LoopProduct-link.woocommerce-loop-product__link {
@@ -41,8 +43,19 @@ background-color: white;
 color: #666CCD ;
 }
 
+.woocommerce-breadcrumb {
+  min-width: 100%;
+}
+
+.site-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
 .site-main > li {
+    margin: 10px;
     border: solid;
     border-color: #666CCD;
     border-width: 2px;
