@@ -2,7 +2,7 @@
     /* background-color: violet !important ;  */
     padding-inline-start: 0px;
     display: flex;
-    width: 100%;
+    width: 80%;
 }
 .related > .products h2 {
     font-size: 2vh;
@@ -26,7 +26,6 @@
     width: auto;
 }
 .apa{
-    background-color: rgb(213, 255, 196);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -77,10 +76,7 @@
 #tab-description h2{
     text-decoration: underline;
 }
-#tab-description p{
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-}
+
 
 #main {
     color:#666CCD;

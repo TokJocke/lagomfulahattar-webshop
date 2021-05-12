@@ -1,4 +1,4 @@
-/* 
+/*
 Theme name: lagom fula hattar theme
 Author: Jocke, Sebbe, Robin, Anton & Victor
 */
@@ -11,7 +11,7 @@ Author: Jocke, Sebbe, Robin, Anton & Victor
     font-weight: bold;
 }
 
-html, body{ 
+html, body{
     min-height: 100vh;
     overflow :auto;
     background-color: #FDD781;
@@ -24,7 +24,7 @@ main {
     min-width: 85%;
     margin-left: 15%;
     margin-top: 15vh;
-    
+
 }
 
 /* Header */
@@ -97,7 +97,7 @@ main {
 }
 
 .menu > li {
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
 
 }
 
@@ -133,7 +133,7 @@ li:hover .linkFloor {
     color: #666CCD;
 
    /*  justify-content: center; */ /* Makes the nav links centered.. Maybe not for keeping */
-}  
+}
 
 
 /* Footer */
@@ -147,7 +147,7 @@ li:hover .linkFloor {
     min-height: 85vh;
     padding: 2em;
     padding-left: 15%;
-    
+
 } */
 
 footer {/* Alternativ 2 */
@@ -195,8 +195,8 @@ footer {/* Alternativ 2 */
 
     .footerBottom {
         display:flex;
-        width: 100%;    
-        height: 20vh;  
+        width: 100%;
+        height: 20vh;
         justify-content: flex-start;
         align-items: center;
 
@@ -284,7 +284,7 @@ ins {
     right: 0.2em;
     background-color: lightgreen;
 }
-    
+
 .wc-block-grid__product-onsale > span {
     color: black;
 }
@@ -320,8 +320,4 @@ ins {
     margin-top: 0.5em;
     border-radius: 10px;
     font-size: 1rem;
-}
-
-#menuDropDown, #mobileLogoWrapper {
-    display: none;
 }
