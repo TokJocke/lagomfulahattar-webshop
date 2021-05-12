@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php get_template_part('navbar'); ?>
+
 <div class="content">
 	<?php
 		do_action( 'woocommerce_before_main_content' );
