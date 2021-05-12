@@ -8,15 +8,15 @@
 
 <section id="account-section">
 
-<div id="mitt-konto">
-
+<!-- <div id="mitt-konto">
+ -->
 
 <?php while (have_posts()) {
         the_post();
         the_content();
 } ?>
 
-</div>
+<!-- </div> -->
 
 
 
