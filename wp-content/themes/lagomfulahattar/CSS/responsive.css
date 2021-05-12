@@ -50,40 +50,43 @@
 
     #topHeader {
         padding-left: 0;
-        flex-direction: row-reverse;
+        padding-bottom: 1em;
+        height: 15%;
     }
 
-    .headerDiv, #menuDropDown, #mobileLogoWrapper {
-        display: flex;
-        flex: 1;
-        height: 100%;
+    .headerDiv {
+        display: none;
     }
-  
-    .headerDiv > .logo {
-        font-size: 1.5rem;
+
+    .mobileHeaderDiv {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    #menuDropDown {
+        display: flex;
+        font-size: 5rem;
+        align-items: center;
+    } 
+
+    #mobileLogoWrapper {
+        display: flex;
     }
 
     .mobileLogo {
         display: flex;
         height: 100%;
         width: 100%;
-        margin-top: 1em;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .mobileLogo > img {
         object-fit: contain;
-        height: 100%;
+        width: 50%;
     }
-
-    #menuDropDown {
-        font-size: 5rem;
-        align-items: center;
-        padding-left: 0.5em;
-    }
-
-
-
-
 
     .paraBox > h1 {
         font-size: 4rem;
@@ -123,58 +126,181 @@
     .footerLogoWrapper {
         position: relative;
     }
-    /* Slider */
-   /*   .wcps-container {
-        height: 90%;
-    }
-    
-    .wcps-items, .owl-stage-outer, .owl-stage, .owl-item, .item   {
+
+    #account-section {
+        margin-left: 0;
+        min-width: 100%;
+        max-width: 100%;
         height: 100%;
-     
-        margin-top: 0.5em;
- 
-    }
-    .wcps-items, .owl-stage-outer, .owl-stage {
-
-        width: 100% !important;
-
-    }
-    .owl-item, .item {
-        width: 50vw !important;
-        height: 95%;
-        margin-left: 2em;
-
-    }  */
-
-   /*  .wcps-items-thumb {
-        min-height: 50%;
-    }
-
-    .wcps-items-thumb > a > img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .wcps-items-price {
-        font-size: 1.5rem;
-    }
-
-    .wcps-items-cart {
+        margin-bottom: 2em;
+        margin-top: 20%;
         font-size: 2rem;
     }
 
-    .wcps-items-title > a{
-        font-size: 4rem;
-    } */
+    nav.woocommerce-MyAccount-navigation{
+        margin-left: 0;
+        margin-top: 0;
+    }
 
+    #mitt-konto {
+        margin-left: 0;
+        min-width: 100%;
+        max-width: 100%;
+    }
 
+    .u-columns {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        height: 100%;
+    }
 
+    .u-columns {
+        margin-top: 10vh !important;
+    }
 
+    .u-column1 {
+        min-width: 100%;
+    }
 
+    .u-column2 {
+        min-width: 100%;
+    }
 
-
-
-
-
+    .u-column1 > h2 {
+        font-size: 3rem;
+        margin-bottom: 1em;
 
     }
+
+    .woocommerce-form {
+        font-size: 2.5em;
+        min-width: 100vw;
+      
+    }
+
+    .woocommerce-form-row > input {
+        font-size: 2em;
+    }
+
+    .password-input > input {
+        font-size: 2em;
+    }
+
+    .woocommerce-form__input-checkbox {
+        width: 4em;
+        height: 4em;
+    }
+
+    .shop-content {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-title {
+        font-size: 2.5rem;
+    }
+
+    .taxo-list > a {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .parallax, .paraBox {
+        min-width: 100%;
+        max-width: 100%;
+
+    }
+
+    .parallax {
+        justify-content: center;
+    }
+
+    .paraBox {
+        min-height: 90%;
+        max-height: 90%;
+    }
+
+    .paraBox > h1 {
+        font-size: 2rem;
+    }
+
+    .wc-block-grid > ul > li {
+        min-height: 40% ;
+        /* max-height: 50%; */
+        max-width: 55% !important;
+    }
+
+    #menuDropDown {
+        font-size: 2.5rem;
+    } 
+
+    .mobileLogo > img {
+        object-fit: contain;
+        width: 30%;
+    }
+
+    footer {
+        min-height: 100%;
+        max-height: 100%;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .footerTopLeft {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .footerTopLeft > .wpgmza_map {
+        height: 40vh !important;
+    }  
+
+    .footerTopRight {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1em;
+
+    }
+    .footerBottom {
+        flex-direction: column;
+        
+    }
+
+    .menu-social-media-container {
+        max-width: 100%;
+    }
+    #menu-social-media > li {
+        font-size: 1.5rem;
+    }
+
+    .linkText {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+   
+    .woocommerce-form {
+        font-size: 1.5em;
+        min-width: 100vw;
+      
+    }
+
+    .woocommerce-form-row > input {
+        font-size: 1em;
+    }
+
+    .password-input > input {
+        font-size: 1em;
+    }
+
+    #account-section {
+        margin-top: 20%;
+    }
+
+}
