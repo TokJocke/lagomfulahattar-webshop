@@ -18,7 +18,28 @@
             <h2><?=get_bloginfo("name");?></h2> 
          </a>
          <?php dynamic_sidebar("search_bar"); ?>
+      
+     
       </div>
+        
+      
+
+         
+   <div id="mobileLogoWrapper">
+      <div class="mobileLogo">
+         <?php dynamic_sidebar("logo"); ?>
+      </div>
+   </div>
+        
+   
+   <div id="menuDropDown" class="fas fa-bars">
+
+   </div>
+
+     
+
+
+     
 
 
 
